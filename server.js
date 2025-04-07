@@ -6,6 +6,7 @@ const passport= require('./auth')
 const {jwtAuthMiddleware, generateToken}= require('./jwt');
 const cors= require('cors');
 app.use(cors());
+app.use(express.json());
 
 const bodyParser= require('body-parser');
 const Data = require('./data');
