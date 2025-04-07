@@ -12,7 +12,7 @@ const Data = require('./data');
 const { error } = require('console');
 app.use(bodyParser.json());
 
-const port = process.env.Port || 5000;
+const port = process.env.PORT || 5000;
 
 const logRequest= (req, res, next) => {
     console.log(`[${new Date().toLocaleString()}] Request made to: ${req.originalUrl}`);
