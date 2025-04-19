@@ -113,7 +113,7 @@ router.post('/verify-reset-code', async(req, res)=> {
     try {
         const user= await Data.findOne({email});
 
-        if(!user || user.resetCode !== code){
+        if(!user || user.resetCode != code){
             return res.status(400).json({message: 'Invalid reset code'})
         }
 
