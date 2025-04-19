@@ -14,8 +14,10 @@ const dataSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  resetPasswordToken: String,
-  resetPasswordExpires: Date,
+  // resetPasswordToken: String,
+  // resetPasswordExpires: Date,
+  resetCode: String,
+  resetCodeExpires: Date,
 });
 
 dataSchema.pre("save", async function (next) {
