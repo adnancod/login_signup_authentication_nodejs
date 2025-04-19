@@ -134,7 +134,7 @@ router.post('/reset-password', async(req, res)=>{
     try {
         const user= await Data.findOne({email});
 
-        if(!user || user.resetCode !== code){
+        if(!user || user.resetCode != code){
             return res.status(400).json({error: 'Invalid reset code'})
         }
         if(user.resetCodeExpires < Date.now()){
